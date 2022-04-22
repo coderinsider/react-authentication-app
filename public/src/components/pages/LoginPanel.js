@@ -16,7 +16,7 @@ const LoginPanel = () => {
 
 	const onSignUpClicked = () => {
 		alert('signup clicked');
-		navigate('/sign-in');
+		navigate('/sign-up');
 	}
 	return (
 		<div className="content-container">

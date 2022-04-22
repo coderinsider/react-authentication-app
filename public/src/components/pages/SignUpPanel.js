@@ -4,6 +4,14 @@ export const SignUpPanel = () => {
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const navigate = useNavigate();
+	const signUpAccountRoute  = () => {
+		navigate('/sign-up');
+	}
+
+	const loginPanelRoute = ()  => {
+		navigate('/login');
+	}
 	return (
 		<div className="content-container">
 			<h1>Sign Up</h1>
@@ -34,8 +42,8 @@ export const SignUpPanel = () => {
 			/>		
 			<hr/>
 
-			<button>Sign Up</button>
-			<button>Already have an account? Log in</button>				
+			<button onClick={signUpAccountRoute}>Sign Up</button>
+			<button onClick={loginPanelRoute}>Already have an account? Log in</button>				
 		</div>
 	);
 }
