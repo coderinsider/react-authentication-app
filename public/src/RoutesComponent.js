@@ -2,9 +2,11 @@ import {
    Routes,
    Route  
 } from "react-router-dom";
+
 import UserInfoMain from './components/pages/userinfo/UserInfoMain';
 import LoginPanel from './components/pages/LoginPanel';
 import { SignUpPanel } from './components/pages/SignUpPanel';
+import { PrivateRoute } from  './components/authen/PrivateRoute';
 import { 
    HomePage, LoginPage,
    UserListsPage, EachUserId, UserNewPage 
@@ -12,7 +14,7 @@ import {
 export const RoutesComponent = () => {
    return (
       <Routes>
-         <Route path="userinfo" element={<UserInfoMain />} />
+         <Route path="userinfo" element={<PrivateRoute />} />
          <Route index element={<HomePage />} />
          <Route path="login" element={<LoginPanel />} />
          <Route path="sign-up" element={<SignUpPanel />} />

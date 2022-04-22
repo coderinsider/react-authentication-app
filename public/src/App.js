@@ -3,14 +3,17 @@ import {
    BrowserRouter,
 
 } from "react-router-dom";
+import React, {Fragment} from 'react';
 import './App.css'
 import HeaderPanel from './components/pages/HeaderPanel';
 const App = () => {
    return (
       <>
          <BrowserRouter>
-            <HeaderPanel />
-            <RoutesComponent/>
+            <Fragment>
+               <HeaderPanel />
+               <RoutesComponent/>
+            </Fragment>
          </BrowserRouter>
       </>
    )
