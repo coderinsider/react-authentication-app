@@ -2,7 +2,7 @@ import { getDbConnection } from "../db";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 export const signUpRoute = {
-    path: "/api/signup",
+    path: '/api/signup',
     method: 'post',
     handler: async (req, res) => {
         const { email, password } = req.body;
@@ -30,5 +30,24 @@ export const signUpRoute = {
         });
 
         const { insertId } = results;
+
+        jwt.sign(
+            {
+                id: insertId,
+                email,
+                info: startingInfo,
+                isVerified: false
+            },
+            process.env.JWT_SECRET,
+            {
+                expiresIn: '2d'
+            },
+            (err, token) => {
+                if(err) {
+                    return res.status(500).send(err);
+                }
+                return res.status(200).json({token});
+            }
+        );
     }
 }
