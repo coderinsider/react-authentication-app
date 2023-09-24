@@ -1,22 +1,9 @@
-import { RoutesComponent } from './RoutesComponent';
-import {
-   BrowserRouter,
+import { Routes } from './Routes';
 
-} from "react-router-dom";
-import React, {Fragment} from 'react';
-import './App.css'
-import HeaderPanel from './components/pages/HeaderPanel';
-const App = () => {
-   return (
-      <>
-         <BrowserRouter>
-            <Fragment>
-               <HeaderPanel />
-               <RoutesComponent/>
-            </Fragment>
-         </BrowserRouter>
-      </>
-   )
+export const App = () => {
+    return (
+        <div className="page-container">
+            <Routes />
+        </div>
+    );
 }
-
-export default App
