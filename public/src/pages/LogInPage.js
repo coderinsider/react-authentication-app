@@ -5,6 +5,7 @@ import { useToken } from '../auth/useToken';
 
 export const LogInPage = () => {
     const [token, setToken] = useToken();
+
     const [errorMessage, setErrorMessage] = useState('');
 
     const [emailValue, setEmailValue] = useState('');
@@ -15,12 +16,11 @@ export const LogInPage = () => {
     const onLogInClicked = async () => {
         const response = await axios.post('/api/login', {
             email: emailValue,
-            passowrd: passwordValue
+            password: passwordValue,
         });
         const { token } = response.data;
         setToken(token);
         history.push('/');
-        // alert('Log in not implemented yet');
     }
 
     return (
