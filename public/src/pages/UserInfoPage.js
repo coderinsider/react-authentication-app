@@ -100,8 +100,8 @@ export const UserInfoPage = () => {
             </label>
             <hr />
             <button onClick={saveChanges}>Save Changes</button>
-            <button onClick={resetValues}>Reset Values</button>
-            <button onClick={logOut}>Log Out</button>
+            <button onClick={resetValues}>Reset Record</button>
+            <button onClick={logOut}>Sign Out</button>
         </div>
     );
 }
