@@ -6,9 +6,9 @@ import axios from 'axios';
 
 export const UserInfoPage = () => {
     const user = useUser();
-    const [token, setToken] = useToken();
+    const [ token, setToken ] = useToken();
 
-    const {id, email, info } = user;
+    const { id, email, info } = user;
 
     // We'll use the history to navigate the user
     // programmatically later on (we're not using it yet)
@@ -16,9 +16,9 @@ export const UserInfoPage = () => {
 
     // These states are bound to the values of the text inputs
     // on the page (see JSX below). 
-    const [favoriteFood, setFavoriteFood] = useState(info.favoriteFood || '');
-    const [hairColor, setHairColor] = useState(info.hairColor || '');
-    const [bio, setBio] = useState(info.bio || '');
+    const [ favoriteFood, setFavoriteFood ] = useState(info.favoriteFood || '');
+    const [ hairColor, setHairColor ] = useState(info.hairColor || '');
+    const [ bio, setBio ] = useState(info.bio || '');
 
     // These state variables control whether or not we show
     // the success and error message sections after making
