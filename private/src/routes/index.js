@@ -1,12 +1,13 @@
+import { logInRoute } from './logInRoute';
 import { signUpRoute } from './signUpRoute';
 import { testRoute } from './testRoute';
-import { textEmailRoute } from './testEmailRoute';
-import { logInRoute } from './loginRoute';
 import { updateUserInfoRoute } from './updateUserInfoRoute';
+import { verifyEmailRoute } from './verifyEmailRoute';
+
 export const routes = [
+    logInRoute,
     signUpRoute,
     testRoute,
-    logInRoute,
-    textEmailRoute,
-    updateUserInfoRoute
+    updateUserInfoRoute,
+    verifyEmailRoute,
 ];
