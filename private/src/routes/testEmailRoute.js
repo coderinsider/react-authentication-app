@@ -1,20 +1,20 @@
-import { sendEmail } from "../util/syncEmail";
+import { sendEmail } from '../util/sendEmail';
 
-export const textEmailRoute = {
+export const testEmailRoute = {
     path: '/api/test-email',
     method: 'post',
-    handler: async(req, res) => {
+    handler: async (req, res) => {
         try {
             await sendEmail({
-                to: "mkk@gmail.com",
-                from: 'hsu@gmail.com',
-                subject: 'Does this work',
-                text: 'If you\re reading'
+                to: 'shaun.linkedin.learning+test1@gmail.com',
+                from: 'shaun.linkedin.learning@gmail.com',
+                subject: 'Does this work?',
+                text: 'If you\'re reading this... yes!',
             });
             res.sendStatus(200);
-        } catch(e) {
+        } catch (e) {
             console.log(e);
             res.sendStatus(500);
         }
-    } 
+    }
 }
