@@ -5,6 +5,7 @@ import { updateUserInfoRoute } from './updateUserInfoRoute';
 import { verifyEmailRoute } from './verifyEmailRoute';
 import { forgotPasswordRoute } from './forgotPasswordRoute';
 import { resetPasswordRoute } from './resetPasswordRoute';
+import { getGoogleOauthUrlRoute } from './getGoogleOauthUrlRoute';
 export const routes = [
     logInRoute,
     signUpRoute,
@@ -12,5 +13,6 @@ export const routes = [
     updateUserInfoRoute,
     verifyEmailRoute,
     forgotPasswordRoute,
-    resetPasswordRoute
+    resetPasswordRoute,
+    getGoogleOauthUrlRoute
 ];
